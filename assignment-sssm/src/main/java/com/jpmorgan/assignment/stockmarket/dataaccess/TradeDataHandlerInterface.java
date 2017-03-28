@@ -14,9 +14,9 @@ import com.jpmorgan.assignment.stockmarket.model.Trade;
  */
 public interface TradeDataHandlerInterface {
 
-	  /** */
+	  /** Method to add a trade for particular {@link Stock}*/
 	  void addTrade(Trade trade);
 	  
-	  /** */
-	  public List<Trade> filterTrades(Stock stock, long minutes);
+	  /** Method to filter the trades for a time frame for particular {@link Stock}*/
+	  public List<Trade> filterTrades(Stock stock, long pastTime);
 }

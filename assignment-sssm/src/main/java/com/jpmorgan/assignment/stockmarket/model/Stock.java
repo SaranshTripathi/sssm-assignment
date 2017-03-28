@@ -5,8 +5,6 @@ package com.jpmorgan.assignment.stockmarket.model;
 
 import java.util.List;
 
-import com.jpmorgan.assignment.stockmarket.model.enums.StockType;
-
 /**
  * @author sharanshtripathi
  *
@@ -25,6 +23,11 @@ public class Stock {
 	private double fixedDividend;
 	/** */
 	private double parValue;
+	
+	/** {@link StockType} enum to represent the stock type for stocks. */
+	public enum StockType {
+		COMMON, PREFERRED
+	}
 	
 	/** Default constructor */
 	public Stock(String symbol, StockType type, double lastDividend, double fixedDividend, double parValue) {
@@ -61,18 +64,6 @@ public class Stock {
 		this.stockType = stockType;
 	}
 	/**
-	 * @return the lastDividend
-	 */
-	public double getLastDividend() {
-		return lastDividend;
-	}
-	/**
-	 * @param lastDividend the lastDividend to set
-	 */
-	public void setLastDividend(double lastDividend) {
-		this.lastDividend = lastDividend;
-	}
-	/**
 	 * @return the fixedDividend
 	 */
 	public double getFixedDividend() {
@@ -83,6 +74,18 @@ public class Stock {
 	 */
 	public void setFixedDividend(double fixedDividend) {
 		this.fixedDividend = fixedDividend;
+	}
+	/**
+	 * @return the trades
+	 */
+	public List<Trade> getTrades() {
+		return trades;
+	}
+	/**
+	 * @param trades the trades to set
+	 */
+	public void setTrades(List<Trade> trades) {
+		this.trades = trades;
 	}
 	/**
 	 * @return the parValue
@@ -97,15 +100,15 @@ public class Stock {
 		this.parValue = parValue;
 	}
 	/**
-	 * @return the trades
+	 * @return the lastDividend
 	 */
-	public List<Trade> getTrades() {
-		return trades;
+	public double getLastDividend() {
+		return lastDividend;
 	}
 	/**
-	 * @param trades the trades to set
+	 * @param lastDividend the lastDividend to set
 	 */
-	public void setTrades(List<Trade> trades) {
-		this.trades = trades;
+	public void setLastDividend(double lastDividend) {
+		this.lastDividend = lastDividend;
 	}
 }

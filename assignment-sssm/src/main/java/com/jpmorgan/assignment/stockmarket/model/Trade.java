@@ -5,8 +5,6 @@ package com.jpmorgan.assignment.stockmarket.model;
 
 import java.time.LocalDateTime;
 
-import com.jpmorgan.assignment.stockmarket.model.enums.TradeIndicator;
-
 /**
  * @author sharanshtripathi
  *
@@ -23,6 +21,11 @@ public class Trade {
 	private int quantity = 0;
 	/** */
 	private double price = 0.0;
+	
+	/** {@link TradeIndicator} enum to represent trade indicators for specific stock. */
+	public enum TradeIndicator {
+		BUY, SELL
+	}
 
 	public Trade(Stock stock, LocalDateTime timestamp, int quantity, TradeIndicator type, double price) {
 		super();

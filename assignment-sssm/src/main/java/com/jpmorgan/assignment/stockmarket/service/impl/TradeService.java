@@ -20,8 +20,8 @@ public class TradeService implements TradeServiceInterface {
 	public static TradeServiceInterface instance = null;
 	private TradeDataHandlerInterface tradeHandler = new TradeDataHandler();
 
-	public static TradeServiceInterface getInstance() {
-		instance = instance == null ? new TradeService() : instance;
+	public static TradeServiceInterface getInstance(boolean singleton) {
+		instance = (instance == null || !singleton) ? new TradeService() : instance;
 		return instance;
 	}
 

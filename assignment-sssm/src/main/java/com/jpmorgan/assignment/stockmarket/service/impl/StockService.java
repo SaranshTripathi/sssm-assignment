@@ -8,8 +8,8 @@ import java.util.List;
 import com.jpmorgan.assignment.stockmarket.dataaccess.StockDataHandlerInterface;
 import com.jpmorgan.assignment.stockmarket.dataaccess.handler.StockDataHandler;
 import com.jpmorgan.assignment.stockmarket.model.Stock;
+import com.jpmorgan.assignment.stockmarket.model.Stock.StockType;
 import com.jpmorgan.assignment.stockmarket.model.Trade;
-import com.jpmorgan.assignment.stockmarket.model.enums.StockType;
 import com.jpmorgan.assignment.stockmarket.service.StockServiceInterface;
 
 /**
@@ -21,8 +21,8 @@ public class StockService implements StockServiceInterface {
 	public static StockServiceInterface instance = null;
 	private StockDataHandlerInterface stockHandler = new StockDataHandler();
 
-	public static StockServiceInterface getInstance() {
-		instance = instance == null ? new StockService() : instance;
+	public static StockServiceInterface getInstance(boolean singleton) {
+		instance = (instance == null || !singleton) ? new StockService() : instance;
 		return instance;
 	}
 

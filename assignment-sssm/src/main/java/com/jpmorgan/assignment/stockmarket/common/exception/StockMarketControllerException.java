@@ -9,14 +9,14 @@ package com.jpmorgan.assignment.stockmarket.common.exception;
  * @author Sharansh Tripathi
  */
 @SuppressWarnings("serial")
-public class ControllerException extends Exception {
+public class StockMarketControllerException extends Exception {
 
 	/**
 	 * Create an ControllerException with a specific message and cause.
 	 * @param message the message
 	 * @param cause the cause
 	 */
-	public ControllerException(String message, Exception cause) {
+	public StockMarketControllerException(String message, Exception cause) {
 		super(message, cause);
 	}
 
@@ -24,7 +24,7 @@ public class ControllerException extends Exception {
 	 * Create an ControllerException with a specific message.
 	 * @param message the message
 	 */
-	public ControllerException(String message) {
+	public StockMarketControllerException(String message) {
 		super(message);
 	}
 

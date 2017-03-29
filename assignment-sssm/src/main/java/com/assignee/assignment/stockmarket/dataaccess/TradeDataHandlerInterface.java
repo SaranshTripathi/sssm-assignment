@@ -1,12 +1,12 @@
 /**
  * 
  */
-package com.jpmorgan.assignment.stockmarket.dataaccess;
+package com.assignee.assignment.stockmarket.dataaccess;
 
 import java.util.List;
 
-import com.jpmorgan.assignment.stockmarket.model.Stock;
-import com.jpmorgan.assignment.stockmarket.model.Trade;
+import com.assignee.assignment.stockmarket.model.Stock;
+import com.assignee.assignment.stockmarket.model.Trade;
 
 /**
  * @author sharanshtripathi

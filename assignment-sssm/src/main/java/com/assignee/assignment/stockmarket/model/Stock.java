@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jpmorgan.assignment.stockmarket.model;
+package com.assignee.assignment.stockmarket.model;
 
 import java.util.List;
 

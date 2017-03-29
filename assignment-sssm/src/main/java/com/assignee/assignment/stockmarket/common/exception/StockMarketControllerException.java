@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jpmorgan.assignment.stockmarket.common.exception;
+package com.assignee.assignment.stockmarket.common.exception;
 
 /**
  * An ControllerException is thrown by stock market controller if it has an unexpected problem.

@@ -1,9 +1,9 @@
-package com.jpmorgan.assignment.stockmarket.service;
+package com.assignee.assignment.stockmarket.service;
 
 import java.util.List;
 
-import com.jpmorgan.assignment.stockmarket.model.Stock;
-import com.jpmorgan.assignment.stockmarket.model.Trade;
+import com.assignee.assignment.stockmarket.model.Stock;
+import com.assignee.assignment.stockmarket.model.Trade;
 
 public interface TradeServiceInterface {
 

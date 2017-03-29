@@ -1,16 +1,18 @@
 /**
  * 
  */
-package com.jpmorgan.assignment.stockmarket.service.impl;
+package com.assignee.assignment.stockmarket.service.impl;
 
 import java.util.List;
 
-import com.jpmorgan.assignment.stockmarket.dataaccess.StockDataHandlerInterface;
-import com.jpmorgan.assignment.stockmarket.dataaccess.handler.StockDataHandler;
-import com.jpmorgan.assignment.stockmarket.model.Stock;
-import com.jpmorgan.assignment.stockmarket.model.Stock.StockType;
-import com.jpmorgan.assignment.stockmarket.model.Trade;
-import com.jpmorgan.assignment.stockmarket.service.StockServiceInterface;
+import com.assignee.assignment.stockmarket.common.constant.StockMarketConstants;
+import com.assignee.assignment.stockmarket.common.exception.InvalidValueException;
+import com.assignee.assignment.stockmarket.dataaccess.StockDataHandlerInterface;
+import com.assignee.assignment.stockmarket.dataaccess.handler.StockDataHandler;
+import com.assignee.assignment.stockmarket.model.Stock;
+import com.assignee.assignment.stockmarket.model.Stock.StockType;
+import com.assignee.assignment.stockmarket.model.Trade;
+import com.assignee.assignment.stockmarket.service.StockServiceInterface;
 
 /**
  * @author sharanshtripathi
@@ -27,18 +29,18 @@ public class StockService implements StockServiceInterface {
 	}
 
 	@Override
-	public void addStock(Stock stock) {
+	public void registerStock(Stock stock) {
 		stockHandler.addStock(stock);
 	}
 
 	@Override
+	public void deRegisterStock(Stock stock) {
+		stockHandler.removeStock(stock);
+	}
+	
+	@Override
 	public Stock getStock(String symbol) {
 		return stockHandler.getStock(symbol);
-	}
-
-	@Override
-	public double calculatePERatio(Stock stock, double price) {
-		return price / stock.getLastDividend();
 	}
 
 	@Override
@@ -62,12 +64,26 @@ public class StockService implements StockServiceInterface {
 	
 	@Override
 	public double calculateGBCE() {
-		double total = 1;
+		double total = 1d;
 		List<Trade> trades = stockHandler.getAllTrades();
 		for (Trade trade : trades) {
 			total = total * trade.getPrice();
 		}
 		return Math.pow(total, (1D / trades.size()));
+	}
+	
+	@Override
+	public double calculatePERatio(Stock stock, double price) throws InvalidValueException {
+		double ld = stock.getLastDividend();
+		if (ld == 0) {
+			throw new InvalidValueException(StockMarketConstants.MessageUnableToCalculatePERatio);
+		}
+		return price / ld;
+	}
+
+	@Override
+	public void clearAll() {
+		stockHandler.clearAll();
 	}
 
 }

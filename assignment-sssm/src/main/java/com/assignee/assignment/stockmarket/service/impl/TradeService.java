@@ -1,15 +1,15 @@
 /**
  * 
  */
-package com.jpmorgan.assignment.stockmarket.service.impl;
+package com.assignee.assignment.stockmarket.service.impl;
 
 import java.util.List;
 
-import com.jpmorgan.assignment.stockmarket.dataaccess.TradeDataHandlerInterface;
-import com.jpmorgan.assignment.stockmarket.dataaccess.handler.TradeDataHandler;
-import com.jpmorgan.assignment.stockmarket.model.Stock;
-import com.jpmorgan.assignment.stockmarket.model.Trade;
-import com.jpmorgan.assignment.stockmarket.service.TradeServiceInterface;
+import com.assignee.assignment.stockmarket.dataaccess.TradeDataHandlerInterface;
+import com.assignee.assignment.stockmarket.dataaccess.handler.TradeDataHandler;
+import com.assignee.assignment.stockmarket.model.Stock;
+import com.assignee.assignment.stockmarket.model.Trade;
+import com.assignee.assignment.stockmarket.service.TradeServiceInterface;
 
 /**
  * @author sharanshtripathi

@@ -14,7 +14,7 @@ For Stocks
 Assuming "Dividend" same as the "Last Dividend" in the "P/E Ratio" formula.
 
 # Version
-Java 1.8
+Java 1.8, 
 maven compiler 3.6.1
 
 # How to run

@@ -1,12 +1,12 @@
 # sssm-assignment
 
 A simple stock market application to manage stocks, trades and provide fuctionalities to calculate
-For a given stock
+ <b>For a given stock</b>
 1. Given any price as input, calculate the dividend yield
 2. Given any price as input, calculate the P/E Ratio
 3. Record a trade, with timestamp, quantity of shares, buy or sell indicator and traded price
-4. Calculate Volume Weighted Stock Price based on trades in past 15 minutes
-For Stocks
+4. Calculate Volume Weighted Stock Price based on trades in past 15 minutes</br>
+ <b>For Stocks</b>
 1. Calculate the GBCE All Share Index using the geometric mean of prices for all stocks.
 
 # Assumption:

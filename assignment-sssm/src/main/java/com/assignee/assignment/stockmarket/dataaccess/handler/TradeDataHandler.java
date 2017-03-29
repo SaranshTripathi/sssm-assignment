@@ -16,6 +16,10 @@ import com.assignee.assignment.stockmarket.model.Trade;
  */
 public class TradeDataHandler implements TradeDataHandlerInterface {
 	
+	// -------------------------------------------------------------------------
+	// TradeDataHandlerInterface implementation
+	// -------------------------------------------------------------------------
+	
 	@Override
 	public void addTrade(Trade trade) {
 	    Stock stock = trade.getStock();
@@ -43,6 +47,10 @@ public class TradeDataHandler implements TradeDataHandlerInterface {
 	    }
 	    return retval;
 	}
+	
+	// -------------------------------------------------------------------------
+	// Local helpers
+	// -------------------------------------------------------------------------
 	
 	private LocalDateTime getLocalDateTimeBefore(long minutes){
 		return LocalDateTime.now().minusMinutes(minutes);

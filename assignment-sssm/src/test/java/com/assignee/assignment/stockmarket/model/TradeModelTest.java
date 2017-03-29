@@ -14,9 +14,10 @@ import com.assignee.assignment.stockmarket.model.Trade.TradeIndicator;
  */
 public class TradeModelTest extends AbstractTest {
 
-	/**
-	 * @throws java.lang.Exception
-	 */
+	// -------------------------------------------------------------------------
+	// Test
+	// -------------------------------------------------------------------------
+	
 	@Test
 	public void test() {
 		Stock stock = new Stock("TEST", StockType.COMMON, 65, 45, 105);

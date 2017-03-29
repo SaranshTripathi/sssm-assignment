@@ -11,6 +11,10 @@ import java.time.LocalDateTime;
  */
 public class Trade {
 
+	// -------------------------------------------------------------------------
+	// Local member variables - Trade properties
+	// -------------------------------------------------------------------------
+	
 	/** */
 	private LocalDateTime timeStamp = null;
 	/** */
@@ -22,11 +26,19 @@ public class Trade {
 	/** */
 	private double price = 0.0;
 	
+	// -------------------------------------------------------------------------
+	// Enum Trade indicator
+	// -------------------------------------------------------------------------
+	
 	/** {@link TradeIndicator} enum to represent trade indicators for specific stock. */
 	public enum TradeIndicator {
 		BUY, SELL
 	}
 
+	// -------------------------------------------------------------------------
+	// Constructors
+	// -------------------------------------------------------------------------
+	
 	public Trade(Stock stock, LocalDateTime timestamp, int quantity, TradeIndicator type, double price) {
 		super();
 		this.stock = stock;
@@ -35,6 +47,10 @@ public class Trade {
 		this.price = price;
 		this.timeStamp = timestamp;
 	}
+	
+	// -------------------------------------------------------------------------
+	// Methods - Getters/Setters
+	// -------------------------------------------------------------------------
 	
 	/**
 	 * @return the timeStamp

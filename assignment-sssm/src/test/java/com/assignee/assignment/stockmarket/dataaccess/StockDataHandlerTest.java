@@ -14,7 +14,15 @@ import com.assignee.assignment.stockmarket.model.Stock.StockType;
  */
 public class StockDataHandlerTest extends AbstractTest {
 
+	// -------------------------------------------------------------------------
+	// Local Members
+	// -------------------------------------------------------------------------
+	
 	private StockDataHandlerInterface handler;
+	
+	// -------------------------------------------------------------------------
+	// Initial set up
+	// -------------------------------------------------------------------------
 	
 	/**
 	 * @throws java.lang.Exception
@@ -23,6 +31,10 @@ public class StockDataHandlerTest extends AbstractTest {
 	public void setUp() throws Exception {
 		this.handler = new StockDataHandler();
 	}
+	
+	// -------------------------------------------------------------------------
+	// Tests
+	// -------------------------------------------------------------------------
 	
 	@Test
 	public void testAddStock() {

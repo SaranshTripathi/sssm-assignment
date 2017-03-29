@@ -22,9 +22,17 @@ import com.assignee.assignment.stockmarket.service.impl.StockService;
  */
 public class StockServiceTest extends AbstractTest {
 
+	// -------------------------------------------------------------------------
+	// Local Members
+	// -------------------------------------------------------------------------
+	
 	private static final double EPSILON = 1E-3;
 	private static StockServiceInterface stockService;
 
+	// -------------------------------------------------------------------------
+	// Initial set up
+	// -------------------------------------------------------------------------
+	
 	@BeforeClass
 	public static void setup() {
 		stockService = StockService.getInstance(false);
@@ -34,6 +42,10 @@ public class StockServiceTest extends AbstractTest {
 		stockService.registerStock(new Stock("TEST4", StockType.PREFERRED, 45, 0.04, 60));
 	}
 
+	// -------------------------------------------------------------------------
+	// Test calculations
+	// -------------------------------------------------------------------------
+	
 	@Test
 	public void testPERatio() throws InvalidValueException {
 		Stock stock = stockService.getStock("TEST3");

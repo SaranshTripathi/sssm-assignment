@@ -17,6 +17,10 @@ import com.assignee.assignment.stockmarket.model.Trade.TradeIndicator;
 /** */
 public class StockMarketController extends BaseController {
 
+	// -------------------------------------------------------------------------
+	// Local helpers - Menu
+	// -------------------------------------------------------------------------
+	
 	private static void registerNewStock(String symbol, StockType stockType, double lastDividend, double fixedDividend,
 			double parValue) {
 		stockService.registerStock(new Stock(symbol, stockType, lastDividend, fixedDividend, parValue));
@@ -62,6 +66,10 @@ public class StockMarketController extends BaseController {
 		stockService.clearAll();
 		logMessage(StockMarketConstants.StatusAllStockRemoved);
 	}
+	
+	// -------------------------------------------------------------------------
+	// Main controller
+	// -------------------------------------------------------------------------
 	
 	public static void main(String[] args) throws IOException {
 		// Precondition check

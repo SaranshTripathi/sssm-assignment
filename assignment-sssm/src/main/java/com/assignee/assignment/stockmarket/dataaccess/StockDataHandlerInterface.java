@@ -14,6 +14,10 @@ import com.assignee.assignment.stockmarket.model.Trade;
  */
 public interface StockDataHandlerInterface {
 
+	// -------------------------------------------------------------------------
+	// Local stock data helpers
+	// -------------------------------------------------------------------------
+	
 	/** */
 	void addStock(Stock stock);
 

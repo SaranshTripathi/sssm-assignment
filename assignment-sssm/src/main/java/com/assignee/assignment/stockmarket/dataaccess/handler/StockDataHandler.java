@@ -18,16 +18,27 @@ import com.assignee.assignment.stockmarket.model.Trade;
  */
 public class StockDataHandler implements StockDataHandlerInterface {
 
+	// -------------------------------------------------------------------------
+	// Member variables
+	// -------------------------------------------------------------------------
+	
 	private Map<String, Stock> stocks = new ConcurrentHashMap<String, Stock>();
 
+	// -------------------------------------------------------------------------
+	// StockDataHandlerInterface implementation
+	// -------------------------------------------------------------------------
+	
+	@Override
 	public void addStock(Stock stock) {
 		stocks.put(stock.getSymbol(), stock);	
 	}
 
+	@Override
 	public void removeStock(Stock stock) {
 		stocks.remove(stock.getSymbol());	
 	}
 	
+	@Override
 	public Stock getStock(String symbol) {
 	    return stocks.get(symbol);
 	}
@@ -46,5 +57,5 @@ public class StockDataHandler implements StockDataHandlerInterface {
 	public void clearAll() {
 		stocks.clear();
 	}
-
+	
 }

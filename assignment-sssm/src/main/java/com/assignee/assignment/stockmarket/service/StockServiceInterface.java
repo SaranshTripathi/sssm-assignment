@@ -8,6 +8,10 @@ import com.assignee.assignment.stockmarket.model.Trade;
 
 public interface StockServiceInterface {
 
+	// -------------------------------------------------------------------------
+	// Stock service methods
+	// -------------------------------------------------------------------------
+	
 	/** */
 	public void registerStock(Stock stock);
 

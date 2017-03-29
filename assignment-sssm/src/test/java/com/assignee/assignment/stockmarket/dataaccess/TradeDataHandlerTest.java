@@ -24,8 +24,16 @@ import com.assignee.assignment.stockmarket.model.Trade.TradeIndicator;
  */
 public class TradeDataHandlerTest extends AbstractTest {
 
+	// -------------------------------------------------------------------------
+	// Local members
+	// -------------------------------------------------------------------------
+	
 	private StockDataHandlerInterface stockHandler;
 	private TradeDataHandlerInterface tradeHandler;
+	
+	// -------------------------------------------------------------------------
+	// Initial setup
+	// -------------------------------------------------------------------------
 	
 	/**
 	 * @throws java.lang.Exception
@@ -35,6 +43,10 @@ public class TradeDataHandlerTest extends AbstractTest {
 		this.stockHandler = new StockDataHandler();
 		this.tradeHandler = new TradeDataHandler();
 	}
+	
+	// -------------------------------------------------------------------------
+	// Tests
+	// -------------------------------------------------------------------------
 	
 	@Test
 	public void testAddTrade() {

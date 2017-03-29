@@ -11,6 +11,10 @@ import java.util.List;
  */
 public class Stock {
 
+	// -------------------------------------------------------------------------
+	// Local member variables - Stock properties
+	// -------------------------------------------------------------------------
+
 	/** */
 	private StockType stockType = StockType.COMMON;
 	/** */
@@ -24,10 +28,18 @@ public class Stock {
 	/** */
 	private double parValue;
 	
+	// -------------------------------------------------------------------------
+	// Enum Stock indicator
+	// -------------------------------------------------------------------------
+	
 	/** {@link StockType} enum to represent the stock type for stocks. */
 	public enum StockType {
 		COMMON, PREFERRED
 	}
+	
+	// -------------------------------------------------------------------------
+	// Constructors
+	// -------------------------------------------------------------------------
 	
 	/** Default constructor */
 	public Stock(String symbol, StockType type, double lastDividend, double fixedDividend, double parValue) {
@@ -38,6 +50,10 @@ public class Stock {
 		this.fixedDividend = fixedDividend;
 		this.parValue = parValue;
 	}
+	
+	// -------------------------------------------------------------------------
+	// Methods - Getters/Setters
+	// -------------------------------------------------------------------------
 	
 	/**
 	 * @return the symbol

@@ -22,8 +22,16 @@ import com.assignee.assignment.stockmarket.service.impl.TradeService;
  */
 public class BaseController {
 
+	// -------------------------------------------------------------------------
+	// Static members 
+	// -------------------------------------------------------------------------
+	
 	protected static StockServiceInterface stockService = StockService.getInstance(true);
 	protected static TradeServiceInterface tradeService = TradeService.getInstance(true);
+	
+	// -------------------------------------------------------------------------
+	// Common helpers
+	// -------------------------------------------------------------------------
 	
 	protected static void initialSetup() {
 		logMessage(StockMarketConstants.SimpleStockMarket);
@@ -50,7 +58,10 @@ public class BaseController {
 		System.out.println(StockMarketConstants.LineSeperator);
 	}
 	
-	// Stock //
+	// -------------------------------------------------------------------------
+	// Stock helpers
+	// -------------------------------------------------------------------------
+	
 	protected static Stock selectedStock(Scanner scanner) throws StockMarketControllerException {
 		System.out.println(StockMarketConstants.MessageInputStockSymbol);
 		String stockSymbol = scanner.nextLine();
@@ -122,7 +133,9 @@ public class BaseController {
 		}
 	}
 	
-	// Trade //
+	// -------------------------------------------------------------------------
+	// Trade helpers
+	// -------------------------------------------------------------------------
 	
 	protected static double selectedPrice(Scanner scanner) throws StockMarketControllerException {
 		System.out.println(StockMarketConstants.MessageInputStockPrice);

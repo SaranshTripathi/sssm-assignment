@@ -12,6 +12,10 @@ import com.assignee.assignment.stockmarket.model.Stock.StockType;
  */
 public final class StockMarketConstants {
 
+	// -------------------------------------------------------------------------
+	// Constructor
+	// -------------------------------------------------------------------------
+	
 	/**
 	 * Default constructor.
 	 * 
@@ -27,6 +31,10 @@ public final class StockMarketConstants {
 		throw new ClassCastException();
 	}
 
+	// -------------------------------------------------------------------------
+	// Common
+	// -------------------------------------------------------------------------
+	
 	/** Constant defining the stock attributes for default stocks. */
 	public static final Stock DefaultStocks[] = 
 		{
@@ -52,9 +60,12 @@ public final class StockMarketConstants {
 	};
 	
 	public static final String LineSeperator = "---------------------------------------------"; 
-	
 	public static final String SimpleStockMarket = "--------------------- Simple stock market-----------------------";
 	public static final String SampleDataAdded   = "Added: Sample data from the Global Beverage Corporation Exchange";
+	
+	// -------------------------------------------------------------------------
+	// Menu helper constants
+	// -------------------------------------------------------------------------
 	
 	public static final String MessageInputStockSymbol = "Please input stock symbol";
 	public static final String MessageInputStockNotFound = "Stock not found";
@@ -85,8 +96,13 @@ public final class StockMarketConstants {
 	public static final String MessageInputQuantity = "Please input quantity";
 	public static final String InvalidTradeQuantityNegative = "Invalid quantity: Must be greated than 0";
 	public static final String InvalidTradeQuantityNaN = "Invalid quantity: Not a number";
+	
 	public static final String InvalidValueOrOption = "Invalid Value or Option provided.";
 	public static final String MessageUnableToCalculatePERatio = "Unable to calculate P/E ratio as last dividend is 0";
+	
+	// -------------------------------------------------------------------------
+	// Status constants
+	// -------------------------------------------------------------------------
 	
 	public static final String StatusStockAdded = "Stock added: ";
 	public static final String StatusStockRemoved = "Stock removed: ";

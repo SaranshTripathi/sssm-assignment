@@ -17,14 +17,26 @@ import com.assignee.assignment.stockmarket.service.TradeServiceInterface;
  */
 public class TradeService implements TradeServiceInterface {
 
-	public static TradeServiceInterface instance = null;
+	// -------------------------------------------------------------------------
+	// Local member variables - static/non static
+	// -------------------------------------------------------------------------
+	
+	private static TradeServiceInterface instance = null;
 	private TradeDataHandlerInterface tradeHandler = new TradeDataHandler();
 
+	// -------------------------------------------------------------------------
+	// Instantiation
+	// -------------------------------------------------------------------------
+	
 	public static TradeServiceInterface getInstance(boolean singleton) {
 		instance = (instance == null || !singleton) ? new TradeService() : instance;
 		return instance;
 	}
 
+	// -------------------------------------------------------------------------
+	// TradeServiceInterface implementation
+	// -------------------------------------------------------------------------
+	
 	@Override
 	public List<Trade> filterTrades(Stock stock, long minutes) {
 		return tradeHandler.filterTrades(stock, minutes);

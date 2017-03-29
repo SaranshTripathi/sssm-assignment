@@ -14,6 +14,10 @@ import com.assignee.assignment.stockmarket.model.Trade;
  */
 public interface TradeDataHandlerInterface {
 
+	// -------------------------------------------------------------------------
+	// Local trade data helpers
+	// -------------------------------------------------------------------------
+	
 	  /** Method to add a trade for particular {@link Stock}*/
 	  void addTrade(Trade trade);
 	  

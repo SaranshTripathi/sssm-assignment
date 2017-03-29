@@ -20,14 +20,26 @@ import com.assignee.assignment.stockmarket.service.StockServiceInterface;
  */
 public class StockService implements StockServiceInterface {
 
-	public static StockServiceInterface instance = null;
+	// -------------------------------------------------------------------------
+	// Local member variables - static/non static
+	// -------------------------------------------------------------------------
+	
+	private static StockServiceInterface instance = null;
 	private StockDataHandlerInterface stockHandler = new StockDataHandler();
 
+	// -------------------------------------------------------------------------
+	// Instantiation
+	// -------------------------------------------------------------------------
+	
 	public static StockServiceInterface getInstance(boolean singleton) {
 		instance = (instance == null || !singleton) ? new StockService() : instance;
 		return instance;
 	}
 
+	// -------------------------------------------------------------------------
+	// StockServiceInterface implementation
+	// -------------------------------------------------------------------------
+	
 	@Override
 	public void registerStock(Stock stock) {
 		stockHandler.addStock(stock);

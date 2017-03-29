@@ -9,6 +9,10 @@ package com.assignee.assignment.stockmarket.common.exception;
 @SuppressWarnings("serial")
 public class InvalidValueException extends StockMarketControllerException {
 
+	// -------------------------------------------------------------------------
+	// Constructors
+	// -------------------------------------------------------------------------
+	
 	/** Constructor. */
 	public InvalidValueException(String message){
 		super(message);

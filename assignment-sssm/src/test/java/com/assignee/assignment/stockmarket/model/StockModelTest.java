@@ -11,6 +11,10 @@ import com.assignee.assignment.stockmarket.model.Stock.StockType;
  */
 public class StockModelTest extends AbstractTest {
 	
+	// -------------------------------------------------------------------------
+	// Test
+	// -------------------------------------------------------------------------
+	
 	@Test
 	public void test() {
 		Stock stock = new Stock("TEST", StockType.COMMON, 65, 45, 105);

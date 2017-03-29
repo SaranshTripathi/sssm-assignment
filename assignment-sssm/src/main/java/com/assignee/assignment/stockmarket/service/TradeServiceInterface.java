@@ -7,6 +7,10 @@ import com.assignee.assignment.stockmarket.model.Trade;
 
 public interface TradeServiceInterface {
 
+	// -------------------------------------------------------------------------
+	// Trade service methods
+	// -------------------------------------------------------------------------
+	
 	/** */
 	public List<Trade> filterTrades(Stock stock, long minutes);
 	

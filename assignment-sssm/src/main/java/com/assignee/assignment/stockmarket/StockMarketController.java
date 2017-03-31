@@ -14,7 +14,10 @@ import com.assignee.assignment.stockmarket.model.Stock.StockType;
 import com.assignee.assignment.stockmarket.model.Trade;
 import com.assignee.assignment.stockmarket.model.Trade.TradeIndicator;
 
-/** */
+/**
+ * @author sharanshtripathi
+ *
+ */
 public class StockMarketController extends BaseController {
 
 	// -------------------------------------------------------------------------

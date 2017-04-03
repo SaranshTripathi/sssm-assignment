@@ -1,7 +1,7 @@
 # sssm-assignment
 
 Not adding much details because of clause in requirement document. <br>
-<b>Unauthorized reproduction or distribution of all or any of this material is strictly prohibited.
+<b>Unauthorized reproduction or distribution of all or any of this material is strictly prohibited.</b>
 
 # Assumption:
 
